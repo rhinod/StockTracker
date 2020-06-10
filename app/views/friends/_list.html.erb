@@ -15,7 +15,11 @@
             <td><%= friend.last_name %> </td>
             <td><%= friend.email %> </td>
             <td><%= friend.stocks.count %></td>
-            <td><%= link_to 'Stop following', friendship_path(friend), method: :delete, data: {confirm: "Are you sure"}, class: "btn btn-sm btn-warning col-sm" %></td>
+            <td class="content-center">
+                
+                <%= link_to 'See profile', '#', class:"btn btn-sm btn-success col-sm-5 ml-4" %>
+                <%= link_to 'Stop following', friendship_path(friend), method: :delete, data: {confirm: "Are you sure"}, class: "btn btn-sm btn-warning col-sm-5" %>
+            </td>
             </tr>
         <% end %>
     </tbody>
