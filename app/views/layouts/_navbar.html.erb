@@ -33,9 +33,10 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-        <li id="name-navbar" class="nav-item badge badge-secondary mr-2 center-block">
-          <%= fa_icon 'user' %> <%= current_user.full_name %>
-        </li>
+        <%= link_to user_path(current_user) ,id:"name-navbar", class: "nav-item badge badge-secondary mr-2 center-block" do %>
+            <%= fa_icon 'user' %> <%= current_user.full_name %>
+        <% end %>
+
         <li class="nav-item">
           <%= link_to 'Log Out', destroy_user_session_path, class: 'btn btn-outline-danger my-2 my-sm-0 mr-2', method: :delete %>
         </li>

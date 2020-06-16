@@ -17,7 +17,7 @@
             <td><%= friend.stocks.count %></td>
             <td class="content-center">
                 
-                <%= link_to 'See profile', '#', class:"btn btn-sm btn-success col-sm-5 ml-4" %>
+                <%= link_to 'See profile', user_path(friend.id), class:"btn btn-sm btn-success col-sm-5 ml-4" %>
                 <%= link_to 'Stop following', friendship_path(friend), method: :delete, data: {confirm: "Are you sure"}, class: "btn btn-sm btn-warning col-sm-5" %>
             </td>
             </tr>
